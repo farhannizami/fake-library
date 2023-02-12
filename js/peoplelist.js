@@ -67,7 +67,7 @@ function clickEventAdd() {
         eachdiv.addEventListener('click',function handleClick(event) {
             console.log(event.target.id);
             localStorage.setItem('from_view_details',event.target.id);
-            location.href = "../checkin.html";
+            location.href = "checkin.html";
         });
     });
 }
