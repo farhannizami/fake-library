@@ -151,6 +151,19 @@ function checkoutBook() {
 
     }
     localStorage.setItem("boi_nise",boinise);
+
+    let total_books = localStorage.getItem('total_books');
+    console.log(total_books);
+    if(total_books)
+    {
+        total_books = parseInt(total_books);
+        total_books += 1;
+        localStorage.setItem('total_books',total_books.toString());
+    }
+    else
+    {
+        localStorage.setItem('total_books','0');
+    }
 }
 
 

@@ -139,6 +139,14 @@ function buttonEventHandle(book_arr) {
             console.log(new_books);
             localStorage.setItem(user_id, new_books);
             localStorage.removeItem(event.target.id);
+
+
+            let total_books = localStorage.getItem('total_books');
+            total_books = parseInt(total_books);
+            total_books-=1;
+            localStorage.setItem('total_books',total_books);
+
+
             showTakenBooks();
         });
     });
