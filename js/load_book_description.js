@@ -92,13 +92,13 @@ async function getAPIData() {
                 <p style="color: red; font-size: 20px;">Stock Out</p>
 
                 <div class="d-flex justify-content-center mt-5">
-                    <button type="button" class="btn btn-primary" disabled>Check Out</button>
+                    <button type="button" class="btn themebtn" disabled>Check Out</button>
                 </div>`;
         }
         else {
             book_info_html.innerHTML += `
                 <div class="d-flex justify-content-center mt-5">
-                    <button type="button" class="btn btn-primary " onclick = "checkoutBook()" data-toggle="modal"
+                    <button type="button" class="btn themebtn " onclick = "checkoutBook()" data-toggle="modal"
                     data-target="#staticBackdrop">Check Out</button>
                 </div>`;
         }

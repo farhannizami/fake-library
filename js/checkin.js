@@ -107,7 +107,7 @@ async function loadData(book_arr) {
                     </div>
                 </div>
                 <div class="col-lg-2 d-flex align-items-center justify-content-center">
-                    <button type="button" class="btn btn-primary checkin-btn" id = "${book_id}">Check In</button>
+                    <button type="button" class="btn themebtn checkin-btn" id = "${book_id}">Check In</button>
                 </div>
             </div>`;
 

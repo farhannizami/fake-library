@@ -10,7 +10,7 @@ function showPeopleList() {
         let user_info = document.createElement('div');
         user_info.innerHTML =
             `<div class="d-flex justify-content-center" style="color: green; font-weight: 700; font-size: 25px;">
-                No Books Cheked Out !!!
+                No Books Checked Out !!!
             </div>`;
         book_container.appendChild(user_info);
     }
