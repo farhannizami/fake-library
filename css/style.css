@@ -11384,3 +11384,13 @@ body.sidebar-toggled footer.sticky-footer {
 {
   cursor: pointer;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #6D9886;
+}
+
+::selection {
+  color: white;
+  background: #6D9886;
+}
