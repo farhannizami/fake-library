@@ -20,14 +20,14 @@
     <!-- Custom styles for this template-->
     <link href="css/style.css" rel="stylesheet">
 
-    <script defer src="js/checkin.js"></script>
+    <script defer src="js/peoplelist.js"></script>
 
     <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
 
-<body id="page-top" onload="checkIfFromViewDetails()">
+<body id="page-top" onload = "showPeopleList()">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -154,21 +154,26 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <h1 class="h3 mb-4 text-gray-800">Check In</h1>
+                    <h1 class="h3 mb-4 text-gray-800">People Who Checked Out Books</h1>
 
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" id = "user-id" placeholder="Enter User ID"
-                            aria-label="Recipient's username" aria-describedby="button-addon2"
-                            style="background-color: #dee0e3 !important;">
-                        <button class="btn btn-outline-primary" type="button" id="button-addon2"
-                            onclick="showTakenBooks()">Proceed</button>
-                    </div>
+                    
 
 
-                    <div class="book-info mt-5 mb-5">
-                        <!-- <div class="d-flex justify-content-center" style="color: green; font-weight: 700; font-size: 25px;">
-                            No Books To Check In !!!
+                    <div class="book-takers mt-5 mb-5">
+                        <!-- <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">123</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        4 Books
+                                    </div>
+                                </div>
+                            </div>
                         </div> -->
+
                     </div>
                      
 

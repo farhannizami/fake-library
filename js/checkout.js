@@ -65,9 +65,7 @@ async function fetchData() {
                 is_available = "Stock Out";
             }
 
-            let acheNaki = document.createElement('div');
-
-            
+                     
 
             let book_info_html = document.createElement('div');
 

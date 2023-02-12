@@ -130,10 +130,28 @@ function checkoutBook() {
         prev_data=search_data;
     }
     localStorage.setItem(user_id,prev_data);
-    //history.back();
-}
 
-console.log(localStorage.getItem("pMEUG8oNBfkC"));
+    let boinise = localStorage.getItem('boi_nise');
+
+    console.log(boinise);
+    //let boinise = "abc|rrr|oops|sdf|abc";
+    if(boinise)
+    {
+        let boinise_list = boinise.split('|');
+        boinise_list = new Set(boinise_list);
+        //console.log(boinise_list);
+        if(!boinise_list.has(user_id))
+        {
+            boinise += "|"+user_id;
+        }
+    }
+    else
+    {
+        boinise = user_id;
+
+    }
+    localStorage.setItem("boi_nise",boinise);
+}
 
 
 function clearstock()

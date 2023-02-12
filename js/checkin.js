@@ -4,9 +4,39 @@ let user_id;
 let i;
 let book_container = document.querySelector('.book-info');
 
+
+function checkIfFromViewDetails()
+{
+    if(localStorage.getItem('from_view_details'))
+    {
+        console.log(localStorage.getItem('from_view_details'));
+        //document.getElementById('user_id').value = localStorage.getItem('from_view_details');
+        //localStorage.removeItem('from_view_details');
+        showTakenBooks();
+    }
+}
+
+
+
 function showTakenBooks() {
-    user_id = document.getElementById('user-id').value;
-    let all_books = localStorage.getItem(user_id);
+    let from_view_details = localStorage.getItem('from_view_details');
+    console.log(from_view_details);
+    if (from_view_details) {       
+        //document.getElementById('user_id').value = from_view_details;
+        let userinputbox = document.getElementById('user-id').value = from_view_details;
+        user_id = from_view_details;
+    }
+    else {
+        user_id = document.getElementById('user-id').value;
+    }
+    getBookInfo(user_id);
+    localStorage.removeItem('from_view_details');
+}
+
+
+function getBookInfo(user_id_local) {
+
+    let all_books = localStorage.getItem(user_id_local);
     book_container.innerHTML = "";
 
     if (all_books) {
@@ -92,20 +122,37 @@ async function loadData(book_arr) {
 }
 
 
-function buttonEventHandle(book_arr)
-{
+function buttonEventHandle(book_arr) {
     let checkinbtn = document.querySelectorAll('.checkin-btn');
     checkinbtn.forEach(btn => {
         btn.addEventListener('click', function handleClick(event) {
             console.log(book_arr.indexOf(event.target.id));
             let ind = book_arr.indexOf(event.target.id);
-            book_arr.splice(ind,1);
+            book_arr.splice(ind, 1);
             console.log(book_arr);
+
+            if (book_arr.length == 0) {
+                cutUserFromList();
+            }
 
             let new_books = book_arr.join("|");
             console.log(new_books);
-            localStorage.setItem(user_id,new_books);
+            localStorage.setItem(user_id, new_books);
+            localStorage.removeItem(event.target.id);
             showTakenBooks();
         });
     });
+}
+
+
+
+function cutUserFromList() {
+    let people_list = localStorage.getItem('boi_nise');
+    let people_list_arr = people_list.split('|');
+    console.log(people_list_arr);
+    let ind = people_list_arr.indexOf(user_id);
+    people_list_arr.splice(ind, 1);
+    console.log(people_list_arr);
+    people_list = people_list_arr.join('|');
+    localStorage.setItem('boi_nise', people_list);
 }
