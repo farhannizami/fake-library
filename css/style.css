@@ -11374,3 +11374,13 @@ body.sidebar-toggled footer.sticky-footer {
 .show > .themebtn-outline.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.5);
 }
+
+
+.book-holder-details:hover
+{
+  cursor: pointer;
+}
+.people-card:hover
+{
+  cursor: pointer;
+}
