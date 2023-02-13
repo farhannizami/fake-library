@@ -11384,6 +11384,10 @@ body.sidebar-toggled footer.sticky-footer {
 {
   cursor: pointer;
 }
+.book-title:hover
+{
+  cursor: pointer;
+}
 
 ::-moz-selection { /* Code for Firefox */
   color: white;
