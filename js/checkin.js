@@ -88,7 +88,7 @@ async function loadData(book_arr) {
             }
             catch
             {
-                book_image = "../img/no_image.png";
+                book_image = "img/no_image.png";
             }
 
             let book_info_html = document.createElement('div');
