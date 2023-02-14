@@ -66,7 +66,7 @@ async function getAPIData() {
         }
         catch
         {
-            book_image = "../img/no_image.png";
+            book_image = "img/no_image.png";
         }
 
 
