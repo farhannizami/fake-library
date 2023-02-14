@@ -37,7 +37,7 @@ async function fetchData() {
             }
             catch
             {
-                book_image = "../img/no_image.png";
+                book_image = "img/no_image.png";
             }
 
             let authors = res_data.items[i].volumeInfo.authors;
